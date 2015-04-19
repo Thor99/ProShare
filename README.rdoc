@@ -1,1 +1,1 @@
-ProShare is a simple way to discover and share new projects, where you can filter projects based in your search term or any category! It was made by me, using Ruby on Rails, to increase my rails skills. Bye \o
+ProShare is a simple way to discover and share new projects, where you can filter projects based in your search term or any category! It was made by me, using Ruby on Rails, to increase my rails skills. Have fun :)
