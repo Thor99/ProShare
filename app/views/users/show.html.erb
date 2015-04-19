@@ -1,0 +1,37 @@
+<div class="show_page">
+	<div class = "image_show">
+		<%= image_tag @user.image.url(:medium) %>
+	</div>
+
+	<ul class="list-group">
+  		<li class="list-group-item", style="text-align:center;font-size:22px;">
+  			<b><%= t('.name') %></b>
+  		</li>
+
+		<li class="list-group-item", style="text-align:center;font-size:20px;font-family: 'Merienda', cursive;">
+			<%= @user.name %>
+		</li>
+	</ul>
+
+	<ul class="list-group">
+  		<li class="list-group-item", style="text-align:center;font-size:22px;">
+  			<b><%= t('.about_project') %></b>
+  		</li>
+  		
+		<li class="list-group-item", style="text-align:center;font-size:20px;font-family: 'Merienda', cursive;">
+			<%= @user.about %>
+		</li>
+	</ul>
+
+</div>
+
+<% if user_signed_in? && current_user == @user %>
+	<div class="links_users">
+		<button type="button" class="btn btn-warning">
+			<%= link_to t('.links_edit'), edit_user_path(@user) %>
+		</button>
+	</div>
+<% end %>
+
+
+

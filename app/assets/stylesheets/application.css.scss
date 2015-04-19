@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar{
+	width: 100%;
+	background-image: linear-gradient(to bottom, #33CCFF, #2EB8E6);
+
+	.nav_each{
+		text-align: center;
+		font-family: 'Comfortaa', cursive;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		a {
+			margin-right: 10px;
+			margin-left: 10px;
+			font-size: 18px;
+			background-image: linear-gradient(to right, #bdc3c7, #2EB8E6);
+			color: #e74c3c;
+		}
+
+		a:hover{
+			margin-right: 10px;
+			margin-left: 10px;
+			background-image: linear-gradient(to right, #bdb1b3, #1Ea8a6);
+			text-decoration: none;
+			color: #0066FF;
+		}
+
+		a:active {
+			margin-right: 10px;
+			margin-left: 10px;
+			background-image: linear-gradient(to right, #bda1a3, #0E9866);
+			text-decoration: none;
+			color: #00248F;
+		}
+		
+	}
+
+
+}
+
+.error_message {
+  margin-left: 5px;
+  display: inline;
+  color: red;
+}

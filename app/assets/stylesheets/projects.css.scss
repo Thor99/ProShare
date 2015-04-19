@@ -1,0 +1,144 @@
+.header_projs_bar{
+	
+	margin: 0 auto;
+	width: 20%;
+	margin-bottom: 30px;
+
+	.header_projs{
+		text-align: center;
+		font-size: 23px;
+		color: #013413;
+		font-family: 'Indie Flower', cursive;
+		font-weight: bold;
+	}
+}
+
+.formin_projects{
+
+	.formin_group_projects{
+		text-align: center;
+		margin-bottom: 20px;
+		.label_form_projects{
+			font-family: 'Cinzel', serif;
+			font-size: 17px;
+			text-align: center;
+		}
+
+	}
+}
+
+.project_name{
+	text-align: center;
+	font-weight: bold;
+	font-size: 45px;
+	font-family: 'Exo 2', sans-serif;
+	margin-bottom: 25px;
+	margin-top: 30px;
+}
+
+.project_about{
+	text-align: center;
+	color: #151515;
+	font-family: 'Comfortaa', cursive;
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+
+.image_show{
+	margin-top: 25px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.author_show{
+	font-size: 18px;
+	font-family: 'Comfortaa', cursive;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.links_projects_show{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.projects_index_background {
+
+		text-align: center;
+
+		font-size: 27px;
+
+		display: inline-block;
+
+		width: 500px;
+
+
+		margin-top: 4%;
+
+		margin-left: 13%;
+
+		margin-right: 6%;
+
+		border: 3px solid #ababab;
+		
+
+		.project_index_name{
+			border: 1px solid #efefef;
+			padding: 3px;
+			font-family: 'Indie Flower', cursive;
+		}
+
+		.project_index_about{
+			border: 1px solid #dcdcdc;
+			padding: 3px;
+			font-family: 'Indie Flower', cursive;
+			font-weight: bold;
+		}
+
+}
+
+.pagination_position{
+	margin-top: 70px;
+	text-align: center;
+}
+
+.no_projects_index{
+	margin-top: 20px;
+	font-size: 30px;
+	color: #c0392b;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+
+::-webkit-input-placeholder {
+   font-weight: bold;
+}
+
+:-moz-placeholder {
+   font-weight: bold;
+}
+
+::-moz-placeholder {
+   font-weight: bold;
+}
+
+:-ms-input-placeholder {  
+   font-weight: bold;
+}
+
+.input-group{
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	border-radius: 25%;
+
+	button{
+		width: 100%;	
+	}
+}
+
+.categories{
+	text-align: center;
+}
+

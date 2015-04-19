@@ -1,0 +1,48 @@
+<div class="formin">
+	
+	<%= form_for @user, :html => {:multipart => true} do |f| %>
+		
+		<div class = "formin_group">
+			<div class="label_form"><%= f.label :name %></div> 
+			<%= f.text_field :name, class: 'form-control' %>
+			<%= error_tag @user, :name %>
+		</div>
+
+		<div class = "formin_group">
+			<div class="label_form"><%= f.label :email %></div> 
+			<%= f.text_field :email, class: 'form-control' %>
+			<%= error_tag @user, :email %>
+		</div>
+
+		<div class = "formin_group">
+			<div class="label_form"><%= f.label :password %></div> 
+			<%= f.password_field :password, class: 'form-control' %>
+			<%= error_tag @user, :password %>
+		</div>
+
+		<div class = "formin_group">
+			<div class="label_form"><%= f.label :password_confirmation %></div> 
+			<%= f.password_field :password_confirmation, class: 'form-control' %>
+			<%= error_tag @user, :password_confirmation %>
+		</div>
+
+		<div class = "formin_group">
+			<div class="label_form"><%= f.label :image %></div> 
+			<%= f.file_field :image, class: 'form-control' %>
+			<%= error_tag @user, :image %>
+		</div>
+
+		<div class = "formin_group">
+			<div class="label_form"><%= f.label :about %></div> 
+			<%= f.text_area :about, class: 'form-control' %>
+			<%= error_tag @user, :about %>
+		</div>
+
+		<div class = "formin_group">
+			<%= f.submit class: "btn btn-success" %>
+		</div>
+
+	<% end %>
+
+</div>
+

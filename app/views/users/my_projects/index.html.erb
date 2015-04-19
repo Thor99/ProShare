@@ -1,0 +1,29 @@
+<div class="input-group">
+  <%= form_tag user_my_projects_path, method: :get do %>
+    <%= text_field_tag :p, @search_mine, class: 'form-control', :placeholder => t('users.my_projects.placeholder') %>
+    <button type="submit" class="button_search"><span class="glyphicon glyphicon-search"></span></button>
+  <% end %>
+</div>
+
+
+<% if @current_user_projects.count == 0 %>
+	<div class = "no_projects_index_and_your_projects">
+		<%= t('users.my_projects.no_projects_searched') %>
+	</div>
+<% else %>
+	<% @current_user_projects.each do |project| %>
+		<div class="my_project_background">
+			<div class="my_project_name">
+				<%= link_to project.name, project %>	
+			</div>
+			
+			<div class="my_project_about">
+				<%= truncate(project.about, length: 30) %>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+
+<div class="pagination_position">
+	<%= paginate @current_user_projects, :theme => 'twitter-bootstrap-3'  %>
+</div>

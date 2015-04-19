@@ -1,0 +1,121 @@
+.formin{
+
+	.formin_group{
+		text-align: center;
+		margin-bottom: 20px;
+		.label_form{
+			font-family: 'Cinzel', serif;
+			font-size: 17px;
+			text-align: center;
+		}
+
+	}
+}
+
+.header_users_bar{
+	
+	margin: 0 auto;
+	width: 20%;
+	margin-bottom: 30px;
+
+	.header_users{
+		text-align: center;
+		font-size: 23px;
+		color: #013413;
+		font-family: 'Indie Flower', cursive;
+		font-weight: bold;
+	}
+}
+
+.show_page{
+	
+	.image_show{
+		margin-top: 30px;
+		text-align: center;
+		img{
+			border-radius: 40%;
+		}
+	}
+	
+}
+
+.links_users{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.no_projects_index_and_your_projects{
+	margin-top: 15px;
+	font-size: 30px;
+	color: green;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+
+
+
+.my_project_background {
+
+		text-align: center;
+
+		font-size: 27px;
+
+		display: inline-block;
+
+		width: 500px;
+
+
+		margin-top: 4%;
+
+		margin-left: 13%;
+
+		margin-right: 6%;
+
+		border: 3px solid #ababab;
+
+		.my_project_name{
+			border: 1px solid #efefef;
+			padding: 3px;
+			font-family: 'Indie Flower', cursive;
+		}
+
+		.my_project_about{
+			border: 1px solid #dcdcdc;
+			padding: 3px;
+			font-family: 'Indie Flower', cursive;
+			font-weight: bold;
+		}
+
+}
+
+.pagination_position{
+	margin-top: 70px;
+	text-align: center;
+}
+
+::-webkit-input-placeholder {
+   font-weight: bold;
+}
+
+:-moz-placeholder {
+   font-weight: bold;
+}
+
+::-moz-placeholder {
+   font-weight: bold;
+}
+
+:-ms-input-placeholder {  
+   font-weight: bold;
+}
+
+.input-group{
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	border-radius: 25%;
+
+	button{
+		width: 100%;	
+	}
+}

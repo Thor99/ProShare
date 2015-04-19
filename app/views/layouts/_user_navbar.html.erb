@@ -1,0 +1,13 @@
+<div class = "navbar">
+	<div class="nav_each">
+    	<%= link_to "Home", root_path, class: 'btn btn-primary' %>
+    	<%= link_to t('layouts.nav_user.new_project'), new_project_path, class: 'btn btn-primary' %>
+    	<%= link_to t('layouts.nav_user.signout'), user_sessions_path, method: :delete, class: 'btn btn-primary' %>
+
+    	<%= link_to t('layouts.nav_user.my_profile'), user_path(current_user), class: 'btn btn-primary' %>
+
+    	<%= link_to t('layouts.nav_user.my_projects'), user_my_projects_path(current_user.id), class: 'btn btn-primary' %>
+
+    	<%= link_to t('layouts.nav_visitor.projects_index'), projects_path, class: 'btn btn-primary' %>
+	</div> 
+</div>

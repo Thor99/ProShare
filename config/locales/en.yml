@@ -1,0 +1,106 @@
+en:
+
+  users:
+    show:
+      name: Username
+      about_project: About the user
+      links_edit: Edit profile
+    edit:
+      title: Update your profile!
+      links_show: Go back to profile
+    new:
+      title: Create your account and start sharing projects!
+    my_projects: 
+      your_projects: Your projects
+      no_projects: No projects until now :(
+      no_projects_searched: None of your projects were founded with the search term
+      placeholder: FInd any of your projects!
+      
+
+  layouts:
+    nav_visitor:
+      signup: Join
+      login: Login
+      projects_index: All the projects
+    nav_user:
+      signout: Logout
+      new_project: New project
+      my_profile: My profile
+      my_projects: My projects
+      projects_index: All the projects
+
+  home:
+    index:
+      what_are_we_title: What is ProShare?
+      what_are_we_text: "ProShare is a Website made to make easier share your projects online. With a simple design, the user is allowed to share and see projects of different types. Enjoy it!"
+      how_it_works_title: How ProShare works?
+      how_it_works_text: "The user can create any projects he want, and add to the project page a website link, a youtube video and a facebook page of the project, so others users can see these useful informations."
+      how_it_was_made_title: How ProShare was made?
+      how_it_was_made_text: "ProShare is a very simple website made using Ruby On Rails, HTML5 e CSS3. It was made by me, Thor Garcia. Username in Github: Thor99. :D"
+  user_sessions:
+    new:
+      title: Login to use all the features!
+
+  projects:
+    index:
+      no_projects_founded: No project founded with the search term given!
+      placeholder_search: Search any project!
+    new:
+      title: Create a new project!
+    edit:
+      title: Update the project!
+    show:
+      page_fb: Facebook page
+      author_project: "Author: "
+      links_edit_project: Update project
+      destroy: Delete project
+
+  flash:
+    notice:
+      user_created: User created successfully! Now log in!
+      user_updated: User updated successfully!
+      signed_in: User logged successfully! Enjoy it!
+      signed_out: Logout successfully made!
+      project_created: Project created successfully!
+      project_updated: Project updated successfully!
+      project_destroyed: Projeto deleted successfully!
+    alert:
+      needs_login: User needs to be logged in!
+      already_logged_in: User is already logged in!
+
+  dialogs:
+    destroy: Are you sure?
+
+  activerecord:
+    models:
+      user: User
+      project: Project
+    attributes:
+      user:
+        name: Name
+        email: Email
+        about: More about you
+        image: Profile image (optional)
+        password: Password
+        password_confirmation: Confirm the password
+      project:
+        name: Project's name
+        about: Tell us more about the project
+        image_proj: Promoting image (optional)
+        website: Project's website (optional)
+        facebook_page: Facebook's page (optional)
+        video: Youtube video (optional)
+
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Password
+    errors:
+      messages:
+        invalid_login: 'Wrong email or password'
+
+  helpers:
+    submit:
+      user_session:
+        create: 'Enter'

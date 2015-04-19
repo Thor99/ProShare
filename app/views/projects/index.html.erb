@@ -1,0 +1,49 @@
+<div class="input-group">
+  <%= form_tag projects_path, method: :get do %>
+    <%= text_field_tag :q, @search, class: 'form-control', :placeholder => t('.placeholder_search') %>
+    <button type="submit" class="button_search"><span class="glyphicon glyphicon-search"></span></button>
+  <% end %>
+</div>
+
+<br> <br>
+
+<% if I18n.locale == :pt %>
+	<div class="categories">
+		<% Category.all.each do |category| %>
+			<button type="button" class="btn btn-default">
+				<%= link_to category.name_pt, projects_path(category: category.name_en) %>
+			</button>
+		<% end %>
+	</div>
+<% else %>
+	<div class="categories">
+		<% Category.all.each do |category| %>
+			<button type="button" class="btn btn-default">
+				<%= link_to category.name_en, projects_path(category: category.name_en) %>
+			</button>
+		<% end %>
+	</div>
+<% end %>
+
+<br>
+
+<% if @projects.count == 0 %>
+	<div class = "no_projects_index"><%= t('.no_projects_founded') %></div>
+<% else %>
+	<% @projects.each do |project| %>
+		<div class="projects_index_background">
+			<div class="project_index_name">
+				<%= link_to project.name, project %>	
+			</div>
+			
+			<div class="project_index_about">
+				<%= truncate(project.about, length: 30) %>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+
+
+<div class="pagination_position">
+	<%= paginate @projects, :theme => 'twitter-bootstrap-3'  %>
+</div>

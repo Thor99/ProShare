@@ -1,0 +1,107 @@
+pt:
+  
+  users:
+    show:
+      name: Nome do usuário 
+      about_project: Sobre o usuário
+      links_edit: Editar perfil
+    edit:
+      title: Edite o seu perfil!
+      links_show: Voltar ao perfil
+    new:
+      title: Crie sua conta e começe a divulgar projetos!
+    my_projects: 
+      your_projects: Seus projetos
+      no_projects: Sem projetos até o momento :(
+      no_projects_searched: Nenhum de seus projetos foi encontrado com o termo de pesquisa!
+      placeholder: Encontre algum projeto seu!
+      
+      
+
+  layouts:
+    nav_visitor:
+      signup: Cadastre-se
+      login: Logue-se
+      projects_index: Todos os projetos
+    nav_user:
+      signout: Sair
+      new_project: Novo projeto
+      my_profile: Meu perfil
+      my_projects: Meus projetos
+      projects_index: Todos os projetos
+
+  home:
+    index:
+      what_are_we_title: O que é o ProShare?
+      what_are_we_text: "ProShare é um site criado para facilitar a divulgação de projetos online. Com um design simples, o usuário tem a total liberdade de divulgar e conhecer projetos de diferentes tipos. Aproveite!"
+      how_it_works_title: Como o ProShare funciona?
+      how_it_works_text: "O usuário pode criar quantos projetos quiser, e fornecer o website, um video no youtube e uma página no facebook do projeto em forma de link para ser mostrado para outros usários interessados no projeto."
+      how_it_was_made_title: Como o ProShare foi feito?
+      how_it_was_made_text: "Proshare é um projeto muito simples que foi feito usando Ruby on rails, HTML5 e CSS3. Foi feito por mim, Thor Garcia. Username no Github: Thor99. :D" 
+  user_sessions:
+    new:
+      title: Se logue para usufruir de tudo!
+
+  projects:
+    index:
+      no_projects_founded: Nenhum projeto encontrado com o termo de pesquisa!
+      placeholder_search: Ache algum projeto!
+    new:
+      title: Crie um novo projeto!
+    edit:
+      title: Edite o projeto!
+    show:
+      page_fb: Página no Facebook
+      author_project: "Autor: "
+      links_edit_project: Editar projeto
+      destroy: Deletar projeto
+
+  flash:
+    notice:
+      user_created: Usuário criado com sucesso! Agora logue!
+      user_updated: Usuário editado com sucesso!
+      signed_in: Usuário logado com sucesso! Aproveite!
+      signed_out: Logout realizado com sucesso!
+      project_created: Projeto criado com sucesso!
+      project_updated: Projeto atualizado com sucesso!
+      project_destroyed: Projeto deletado com sucesso!
+    alert:
+      needs_login: Usuário necessita estar logado!
+      already_logged_in: Usuário já se encontra logado!
+
+  dialogs:
+    destroy: Têm certeza disso?
+
+  activerecord:
+    models:
+      user: Usuário
+      project: Projeto
+    attributes:
+      user:
+        name: Nome
+        email: Email
+        about: Conte mais
+        image: Imagem de perfil (opcional)
+        password: Senha
+        password_confirmation: Confirme sua senha
+      project:
+        name: Nome do projeto
+        about: Conte mais sobre o projeto
+        image_proj: Imagem para divulgação (opcional)
+        website: Site do projeto (opcional)
+        facebook_page: Página no facebook (opcional)
+        video: Video no youtube (opcional)
+
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'

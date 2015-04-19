@@ -1,0 +1,57 @@
+<div class="formin_projects">
+	
+	<%= form_for @project, :html => {:multipart => true} do |f| %>
+		
+		<div class = "formin_group_projects">
+			<div class="label_form_projects"><%= f.label :name %></div> 
+			<%= f.text_field :name, class: 'form-control' %>
+			<%= error_tag @project, :name %>
+		</div>
+		
+		<% if I18n.locale == :pt %>
+			<div class="formin_group_projects">
+				<%= f.collection_select :category_id, Category.all, :id, :name_pt, { prompt: "Escolha uma categoria" } %>
+			</div>
+		<% else %>
+			<div class="formin_group_projects">
+				<%= f.collection_select :category_id, Category.all, :id, :name_en, { prompt: "Choose a category" } %>
+			</div>
+		<% end %>
+
+		<div class = "formin_group_projects">
+			<div class="label_form_projects"><%= f.label :video %></div> 
+			<%= f.text_field :video, class: 'form-control' %>
+			<%= error_tag @project, :video %>
+		</div>
+
+		<div class = "formin_group_projects">
+			<div class="label_form_projects"><%= f.label :website %></div> 
+			<%= f.text_field :website, class: 'form-control' %>
+			<%= error_tag @project, :website %>
+		</div>
+
+		<div class = "formin_group_projects">
+			<div class="label_form_projects"><%= f.label :facebook_page %></div> 
+			<%= f.text_field :facebook_page, class: 'form-control' %>
+			<%= error_tag @project, :facebook_page %>
+		</div>
+
+		<div class = "formin_group_projects">
+			<div class="label_form_projects"><%= f.label :image_proj %></div> 
+			<%= f.file_field :image_proj, class: 'form-control' %>
+			<%= error_tag @project, :image_proj %>
+		</div>
+
+		<div class = "formin_group_projects">
+			<div class="label_form_projects"><%= f.label :about %></div> 
+			<%= f.text_area :about, class: 'form-control' %>
+			<%= error_tag @project, :about %>
+		</div>
+
+		<div class = "formin_group_projects">
+			<%= f.submit class: "btn btn-success" %>
+		</div>
+
+	<% end %>
+
+</div>
