@@ -1,3 +1,13 @@
+<% if I18n.locale == :pt %>
+	<button type="button" class="btn btn-warning">
+		<%= link_to "Click here to have the site in english", :locale => 'en' %>
+	</button>
+<% else %>
+	<button type="button" class="btn btn-warning">
+		<%= link_to "Clique aqui para ter o site em português", :locale => 'pt' %>
+	</button>
+<% end %>
+
 <div class="what_we_are_background">
 	<div class="subtitle">
 		<%= t '.what_are_we_title' %>
@@ -29,3 +39,7 @@
 		<%= t '.how_it_was_made_text' %>
 	</div>
 </div>
+
+
+
+
