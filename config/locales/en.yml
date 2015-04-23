@@ -34,7 +34,7 @@ en:
       what_are_we_title: What is ProShare?
       what_are_we_text: "ProShare is a Website made to make easier share your projects online. With a simple design, the user is allowed to share and see projects of different types. Enjoy it!"
       how_it_works_title: How ProShare works?
-      how_it_works_text: "The user can create any projects he want, and add to the project page a website link, a youtube video and a facebook page of the project, so others users can see these useful informations."
+      how_it_works_text: "The user can create any projects he want, and add to the project page a website link, a youtube video and a facebook page of the project, so others users can see these useful informations. The popularity of these projects are measured by Fambs, and with more Fambs, more recognition."
       how_it_was_made_title: How ProShare was made?
       how_it_was_made_text: "ProShare is a very simple website made using Ruby On Rails, HTML5 e CSS3. It was made by me, Thor Garcia. Username in Github: Thor99. :D"
   user_sessions:
@@ -53,6 +53,7 @@ en:
       page_fb: Facebook page
       author_project: "Author: "
       links_edit_project: Update project
+      links_famb_it: If you like the project, Famb it!
       destroy: Delete project
 
   flash:
@@ -64,6 +65,7 @@ en:
       project_created: Project created successfully!
       project_updated: Project updated successfully!
       project_destroyed: Projeto deleted successfully!
+      famb_project: Project fambed successfully!
     alert:
       needs_login: User needs to be logged in!
       already_logged_in: User is already logged in!

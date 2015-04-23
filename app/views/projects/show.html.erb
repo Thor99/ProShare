@@ -9,8 +9,17 @@
   		</li>
   	</ul>
 <% end %>
+
+<% if user_signed_in? && @project.user != current_user %>
+	<ul class="nav nav-pills nav-justified">
+		<li role="presentation">
+			<%= link_to t('.links_famb_it'), upvote_project_path(@project), method: :post %>
+		</li>
+	</ul>
+<% end %>
+
 <div class="project_name">
-	<%= @project.name %>
+	<%= @project.name %>     (<%= @project.fambs.count %> Fambs)
 </div>
 
 <div class="project_about">

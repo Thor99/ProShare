@@ -1,30 +1,30 @@
 class ProjectsController < ApplicationController
-	before_action :require_authentication, only: [:new, :create, :edit, :update]
+	before_action :require_authentication, only: [:new, :create, :edit, :update, :upvote]
 	before_action :set_users_projects, only: [:edit, :update, :destroy]
 	
 	def index
 		if params[:q].blank? && params[:category].blank?
 
-			@projects = Project.all.order("created_at DESC").page(params[:page]).per(6)
+			@projects = Project.all.order("fambs_count DESC").page(params[:page]).per(6)
 
 		elsif params[:q].present? && params[:category].blank?
 
 			@search = params[:q]
 			projects_searched = Project.search(@search)
-			@projects = projects_searched.all.order('created_at DESC').page(params[:page]).per(6)
+			@projects = projects_searched.all.order('fambs_count DESC').page(params[:page]).per(6)
 
 		elsif params[:q].blank? && params[:category].present?
 
 			@category_id = Category.find_by(name_en: params[:category]).id
-			@projects = Project.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per(6)
+			@projects = Project.where(category_id: @category_id).order("fambs_count DESC").page(params[:page]).per(6)
 
 		elsif params[:q].present? && params[:category].present?
 
 			@category_id = Category.find_by(name_en: params[:category]).id
 			@search = params[:q]
-			projects_with_category = Project.where(category_id: @category_id).order("created_at DESC")
+			projects_with_category = Project.where(category_id: @category_id).order("fambs_count DESC")
 			projects_searched_with_category = projects_with_category.search(@search)
-			@projects = projects_with_category.all.order('created_at DESC').page(params[:page]).per(6)
+			@projects = projects_with_category.all.order('fambs_count DESC').page(params[:page]).per(6)
 
 		end
 	end
@@ -67,10 +67,16 @@ class ProjectsController < ApplicationController
 		redirect_to root_path, notice: t('flash.notice.project_destroyed')
 	end
 
+	def upvote
+		@project = Project.friendly.find(params[:id])
+	    @project.fambs.create
+	    redirect_to @project, notice: t('flash.notice.famb_project')
+	end
+
 	private
 
 	def project_params
-		params.require(:project).permit(:name, :about, :facebook_page, :video, :website, :image_proj, :category_id)
+		params.require(:project).permit(:name, :about, :facebook_page, :video, :website, :image_proj, :category_id, :famb)
 	end
 
 	def set_users_projects

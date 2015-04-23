@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331025202) do
+ActiveRecord::Schema.define(version: 20150423033008) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name_pt"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20150331025202) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "fambs", force: :cascade do |t|
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "fambs", ["project_id"], name: "index_fambs_on_project_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -48,6 +56,7 @@ ActiveRecord::Schema.define(version: 20150331025202) do
     t.integer  "user_id"
     t.string   "slug"
     t.integer  "category_id"
+    t.integer  "fambs_count"
   end
 
   add_index "projects", ["category_id"], name: "index_projects_on_category_id"
@@ -65,11 +74,9 @@ ActiveRecord::Schema.define(version: 20150331025202) do
   end
 
   add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
 
   create_table "tags", force: :cascade do |t|
-    t.string  "name"
-    t.integer "taggings_count", default: 0
+    t.string "name"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
@@ -88,6 +95,6 @@ ActiveRecord::Schema.define(version: 20150331025202) do
     t.string   "slug"
   end
 
-  add_index "users", ["slug"], name: "index_users_on_slug"
+  add_index "users", ["slug"], name: "index_users_on_slug", unique: true
 
 end

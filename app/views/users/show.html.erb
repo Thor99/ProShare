@@ -1,7 +1,9 @@
 <div class="show_page">
-	<div class = "image_show">
-		<%= image_tag @user.image.url(:medium) %>
-	</div>
+	<% if @user.image.present? %>
+		<div class = "image_show">
+			<%= image_tag @user.image.url(:medium) %>
+		</div>
+	<% end %>
 
 	<ul class="list-group">
   		<li class="list-group-item", style="text-align:center;font-size:22px;">

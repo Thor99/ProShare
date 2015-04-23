@@ -3,7 +3,11 @@ Rails.application.routes.draw do
     resources :users do
       resources :my_projects, only: [:index], module: :users
     end
-    resources :projects
+    resources :projects do
+      member do
+       post 'upvote'
+      end
+    end
     resource :user_sessions, only: [:new, :create, :destroy]
   end
 
