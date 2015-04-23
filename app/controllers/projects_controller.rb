@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
 	before_action :require_authentication, only: [:new, :create, :edit, :update, :upvote]
 	before_action :set_users_projects, only: [:edit, :update, :destroy]
 	
+	
+
 	def index
 		if params[:q].blank? && params[:category].blank?
 
@@ -69,8 +71,13 @@ class ProjectsController < ApplicationController
 
 	def upvote
 		@project = Project.friendly.find(params[:id])
-	    @project.fambs.create
-	    redirect_to @project, notice: t('flash.notice.famb_project')
+
+	    if @project.fambs.create(user_id: current_user.id)
+	    	redirect_to @project, notice: t('flash.notice.famb_project')
+	    else
+	    	render action: :show	
+	    end
+	    
 	end
 
 	private

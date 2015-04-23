@@ -10,16 +10,18 @@
   	</ul>
 <% end %>
 
+
 <% if user_signed_in? && @project.user != current_user %>
 	<ul class="nav nav-pills nav-justified">
 		<li role="presentation">
-			<%= link_to t('.links_famb_it'), upvote_project_path(@project), method: :post %>
+			<%= link_to t('.links_famb_it'), upvote_project_path(@project), method: :post, data: { disable_with: t('.wait_famb') } %>
 		</li>
 	</ul>
 <% end %>
 
+
 <div class="project_name">
-	<%= @project.name %>     (<%= @project.fambs.count %> Fambs)
+	<%= @project.name %>     <span class="fambs_count">(<%= @project.fambs.count %> Fambs)</span>
 </div>
 
 <div class="project_about">

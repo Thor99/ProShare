@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	extend FriendlyId
 
 	has_many :projects, dependent: :destroy
+	has_many :upvoted_projects, through: :fambs, source: :project
 	
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 	scope :confirmed, -> { where.not(created_at: nil) }

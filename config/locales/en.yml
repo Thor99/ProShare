@@ -54,6 +54,7 @@ en:
       author_project: "Author: "
       links_edit_project: Update project
       links_famb_it: If you like the project, Famb it!
+      wait_famb: Wait..
       destroy: Delete project
 
   flash:

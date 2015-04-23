@@ -3,6 +3,7 @@ class Project < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :category
 	has_many :fambs, dependent: :destroy
+	has_many :upvoted_users, through: :fambs, source: :user
 
 	FACEBOOK_REGEX = /\A(https?:\/\/)?(?:www\.)?facebook\.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[\w\-]*\/)*([\w\-\.]*)/
 	VIDEO_REGEX = /\A(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([\w-]{10,})/
