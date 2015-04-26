@@ -73,9 +73,9 @@ class ProjectsController < ApplicationController
 		@project = Project.friendly.find(params[:id])
 
 	    if @project.fambs.create(user_id: current_user.id)
-	    	redirect_to @project, notice: t('flash.notice.famb_project')
+	    	redirect_to @project
 	    else
-	    	render action: :show	
+	    	redirect_to @project, notice: "Already fambed!"
 	    end
 	    
 	end
