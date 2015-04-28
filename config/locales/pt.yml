@@ -71,6 +71,7 @@ pt:
     alert:
       needs_login: Usuário necessita estar logado!
       already_logged_in: Usuário já se encontra logado!
+      already_fambed: Projeto ja fambado por você!
 
   dialogs:
     destroy: Têm certeza disso?

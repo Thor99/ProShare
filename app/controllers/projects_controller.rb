@@ -71,11 +71,11 @@ class ProjectsController < ApplicationController
 
 	def upvote
 		@project = Project.friendly.find(params[:id])
-
-	    if @project.fambs.create(user_id: current_user.id)
-	    	redirect_to @project
+		
+	    if @project.fambs.create(user_id: current_user.id) && @project.fambs_count_changed?
+			redirect_to @project
 	    else
-	    	redirect_to @project, notice: "Already fambed!"
+	    	redirect_to @project, alert: t('flash.alert.already_fambed')
 	    end
 	    
 	end
